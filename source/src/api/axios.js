@@ -70,6 +70,7 @@ function successState(response){
 //封装 axios
 
 function apiAxios(method,url,params){
+    console.log(1);
     let httpDefault={
         method:method,
         baseUrl:'',
@@ -78,10 +79,12 @@ function apiAxios(method,url,params){
         data:method==='POST'||method==='PUT'?params:null,
         timeout:1000,
     }
+    console.log(2);
     return new Promise((resolve,reject)=>{
         axios(httpDefault).then((res)=>{
             successState(res);
             resolve(res);
+            console.log(3);
         }).catch((res)=>{
             errorState(res);
             reject(res);

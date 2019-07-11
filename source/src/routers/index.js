@@ -11,6 +11,7 @@ const Demo= () => import('../components/demo/demo.vue');
 const ElementUi= () => import('../components/ElementUi/index.vue');
 
 export default new Router({
+    mode:'history',
     routes:[
         {
             path:'/',

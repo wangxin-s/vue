@@ -34,3 +34,11 @@
     line-height: 320px;
   }
 }
+.main-box{
+  div{
+    line-height:normal;
+  }
+  &>div{
+    text-align: left;
+  }
+}

@@ -12,6 +12,7 @@
             <br/>
             age:<span v-on:click.stop="ageSetFun(2)">{{age}}</span>
         </div>
+        <div @click="jumpClick">点击跳转到ElementUi</div>
         <router-view/>
         <img src="../assets/2.jpg" alt="">
         <img v-bind:src="src" alt="">
@@ -49,7 +50,10 @@
             },
             ...mapActions('helloWorld',[
                 'ageSetFun'
-            ])
+            ]),
+            jumpClick:function(){
+                this.$router.push({name:'ElementUi'})
+            }
         },
         computed:{
            /* name:function(){

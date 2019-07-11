@@ -27,6 +27,7 @@ module.exports={
         path:sourcePath[WEBPACK_PRO_ENV],
         publicPath:'./'
     },
+    devtool:WEBPACK_PRO_ENV=='dev'?'source-map':'nosources-source-map',
     /*resolve: {
         // require时省略的扩展名，如：require('module') 不需要module.js
         extensions: ['', '.js','.css', '.vue']
@@ -67,7 +68,10 @@ module.exports={
             },
             {//解析文字图标
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader'
+                loader: 'url-loader',
+                options:{
+                    name:'images/[name]_[hash:8].[ext]'
+                }
             },
         ]
     },
@@ -78,6 +82,8 @@ module.exports={
             template:'./src/index.html'
         }),
         new VueLoaderPlugin(),
-        new MiniCssExtractPlugin('css/[name]_[hash:8].css')
+        new MiniCssExtractPlugin({
+            filename:'css/[name]_[hash:8].css'
+        })
     ]
 }
