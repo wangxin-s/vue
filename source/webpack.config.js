@@ -73,6 +73,13 @@ module.exports={
                     name:'images/[name]_[hash:8].[ext]'
                 }
             },
+            {//解析文字图标
+                test: /\.(mp4|mp3)$/,
+                loader: 'url-loader',
+                options:{
+                    name:'images/[name]_[hash:8].[ext]'
+                }
+            },
         ]
     },
     plugins:[

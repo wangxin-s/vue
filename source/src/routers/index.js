@@ -10,6 +10,7 @@ const HelloWorld= () => import('../components/HelloWorld.vue');
 const Demo= () => import('../components/demo/demo.vue');
 const ElementUi= () => import('../components/ElementUi/index.vue');
 const DragAndDrop=()=>import('../components/DragAndDrop/index.vue');
+const VideoPlay=()=>import('../components/VideoPlay/index.vue');
 
 export default new Router({
     mode:'history',
@@ -35,6 +36,11 @@ export default new Router({
             path:'/DragAndDrop',
             name:'DragAndDrop',
             component:DragAndDrop
+        },
+        {
+            path:'/VideoPlay',
+            name:'/VideoPlay',
+            component:VideoPlay,
         }
     ]
 })
