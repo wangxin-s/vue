@@ -1,0 +1,30 @@
+.el-header{
+  background-color: #B3C0D1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  min-height: 300px;
+  position:relative;
+}
+.drag,.drop{
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:30px;
+  right:30px;
+  background:url('../../assets/1.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.drag{
+  width:20px;
+  height:20px;
+  top:0px;
+  left:0px;
+  background:url('../../assets/2.jpg') no-repeat;
+}

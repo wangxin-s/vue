@@ -25,7 +25,7 @@ module.exports={
     output:{
         filename:'js/[name]_[chunkhash:8].js',
         path:sourcePath[WEBPACK_PRO_ENV],
-        publicPath:'./'
+        publicPath:'/'
     },
     devtool:WEBPACK_PRO_ENV=='dev'?'source-map':'nosources-source-map',
     /*resolve: {
@@ -61,7 +61,7 @@ module.exports={
                         loader:'url-loader',
                         options:{
                             limit:8192,
-                            name:'images/[name]_[hash:8].[ext]'
+                            name:'images/[name]_[hash:8].[ext]',
                         }
                     }
                 ]
@@ -84,6 +84,12 @@ module.exports={
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename:'css/[name]_[hash:8].css'
+        }),
+        new webpack.ProvidePlugin({
+            $:'jquery',
+            jQuery:'jquery',
+            jquery:'jquery',
+            'window.jquery':'jquery'
         })
     ]
 }

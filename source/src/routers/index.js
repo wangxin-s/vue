@@ -9,6 +9,7 @@ Vue.use(Router);
 const HelloWorld= () => import('../components/HelloWorld.vue');
 const Demo= () => import('../components/demo/demo.vue');
 const ElementUi= () => import('../components/ElementUi/index.vue');
+const DragAndDrop=()=>import('../components/DragAndDrop/index.vue');
 
 export default new Router({
     mode:'history',
@@ -29,6 +30,11 @@ export default new Router({
             path:'/ElementUi',
             name:'ElementUi',
             component:ElementUi,
+        },
+        {
+            path:'/DragAndDrop',
+            name:'DragAndDrop',
+            component:DragAndDrop
         }
     ]
 })
