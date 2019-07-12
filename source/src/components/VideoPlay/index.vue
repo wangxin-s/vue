@@ -9,6 +9,9 @@
                 :playsinline="true"
                 :options="playerOptions"
             ></video-player>
+            <hr/>
+            <h5>html5 video 标签</h5>
+            <video class="video-mark" src="../../assets/video.mp4" controls="controls"></video>
         </el-main>
     </el-container>
 </template>
@@ -57,5 +60,7 @@
 </script>
 
 <style scoped>
-
+    .video-mark{
+        height:300px;
+    }
 </style>
